@@ -222,6 +222,10 @@
     .link-pill svg { width: 12px; height: 12px; flex-shrink: 0; fill: currentColor; }
 
     .bio { font-size: 1.05rem; }
+    .bio-indent {
+      display: block;
+      margin-top: 0.75rem;
+    }
 
     section {
       margin-top: 3rem;
@@ -268,7 +272,7 @@
     /* Entries */
     .entry {
       display: grid;
-      grid-template-columns: 8.5rem 1fr;
+      grid-template-columns: 10.5rem 1fr;
       gap: 0 1.5rem;
       margin-bottom: 1.8rem;
       align-items: start;
@@ -282,6 +286,7 @@
       color: var(--muted);
       padding-top: 0.18rem;
       line-height: 1.4;
+      white-space: nowrap;
     }
 
     .entry-title { font-weight: 500; font-size: 1rem; color: var(--text); }
@@ -488,11 +493,13 @@
     </div>
     <p class="bio" data-lang="en">
       Welcome to my homepage. I recently completed a PhD in pure mathematics at Université Paris-Saclay, where I constructed and studied random processes on quantum structures (Lévy processes on compact quantum groups), work that bridges free probability theory, spectral analysis, and operator algebra.
-      This has natural connections to quantitative finance, machine learning, and quantum information theory. On this page you will find an abbreviated CV, links to my publications, and notes on courses I have taught. For coding projects and technical work, please visit my <a href="https://github.com/jeandelhaye" target="_blank">GitHub profile</a>.
+      <span class="bio-indent">This has natural connections to quantitative finance, machine learning, and quantum information theory.</span>
+      <span class="bio-indent">On this page you will find an abbreviated CV, links to my publications, and notes on courses I have taught. For coding projects and technical work, please visit my <a href="https://github.com/jeandelhaye" target="_blank">GitHub profile</a>.</span>
     </p>
     <p class="bio" data-lang="fr">
       Bienvenue sur ma page personnelle. Je viens de soutenir une thèse de doctorat en mathématiques pures à l'Université Paris-Saclay, où j'ai construit et étudié des processus aléatoires sur des structures quantiques (processus de Lévy sur des groupes quantiques compacts), travail qui relie la théorie des probabilités libres, l'analyse spectrale et les algèbres d'opérateurs.
-      Ce travail entretient des liens naturels avec la finance quantitative, l'apprentissage automatique et la théorie de l'information quantique. Vous trouverez sur cette page un CV abrégé, des liens vers mes publications et des notes sur mes enseignements. Pour mes projets de programmation et travaux techniques, visitez mon <a href="https://github.com/jeandelhaye" target="_blank">profil GitHub</a>.
+      <span class="bio-indent">Ce travail entretient des liens naturels avec la finance quantitative, l'apprentissage automatique et la théorie de l'information quantique.</span>
+      <span class="bio-indent">Vous trouverez sur cette page un CV abrégé, des liens vers mes publications et des notes sur mes enseignements. Pour mes projets de programmation et travaux techniques, visitez mon <a href="https://github.com/jeandelhaye" target="_blank">profil GitHub</a>.</span>
     </p>
   </header>
 
