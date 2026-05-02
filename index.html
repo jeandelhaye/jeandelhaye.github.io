@@ -813,7 +813,6 @@
         <a href="./cat.jpg" download="cat.jpg">
           <img src="./cat.jpg" alt="Cat" />
         </a>
-        <a href="./cat.jpg" download="cat.jpg">Download cat.jpg</a>
       </div>
     </div>
   </section>
@@ -860,6 +859,7 @@
     ];
 
     let state = 0;
+    let found = false;
     let idleTimer = null;
 
     function setState(s) {
@@ -886,6 +886,7 @@
     }
 
     btn.addEventListener('mouseenter', () => {
+      if (found) return;
       clearTimeout(idleTimer);
       if (state === 0) setState(1);
       else if (state === 1) setState(2);
@@ -893,13 +894,20 @@
     });
 
     btn.addEventListener('mouseleave', () => {
+      if (found) return;
       armIdle();
     });
 
     btn.addEventListener('click', () => {
+      if (found) return;
       if (state === 2) {
-        reveal.classList.add('visible');
+        found = true;
+        clearTimeout(idleTimer);
         setState(0);
+        reveal.classList.add('visible');
+        btn.textContent = 'You found me';
+        btn.classList.remove('state-2');
+        btn.style.pointerEvents = 'none';
       }
     });
   })();
