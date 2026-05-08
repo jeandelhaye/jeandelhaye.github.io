@@ -10,43 +10,31 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f9f8f5;
-      --text: #2f1a11;
-      --muted: #6f5445;
-      --accent: #f2ad78;
-      --accent-light: #fee5cf;
-      --border: #6c2b11;
-      --card: #fff8ef;
-      --tag-bg: #6c2b11;
-      --tag-text: #f2ad78;
-      --auburn: #6c2b11;
-      --peach: #f2ad78;
-      --panel: #5b2410;
-      --panel-edge: #3d1607;
+      --olive-rgb: 0, 0, 0;
+      --forest-rgb: 20, 33, 61;
+      --caramel-rgb: 252, 163, 17;
+      --copper-rgb: 252, 163, 17;
+      --bg: #E5E5E5;
+      --text: #000000;
+      --muted: rgba(var(--forest-rgb), 0.72);
+      --accent: #FCA311;
+      --link: #FCA311;
+      --accent-light: rgba(var(--caramel-rgb), 0.16);
+      --border: rgba(var(--forest-rgb), 0.24);
+      --card: rgba(255, 255, 255, 0.78);
+      --tag-bg: #14213D;
+      --tag-text: #FFFFFF;
+      --auburn: #000000;
+      --peach: #FCA311;
+      --panel: #000000;
+      --panel-edge: #14213D;
       --sidebar-w: 240px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #21140f;
-        --text: #f9e6d5;
-        --muted: #d0b29a;
-        --accent: #f2ad78;
-        --accent-light: #3a2015;
-        --border: #f2ad78;
-        --card: #2e1a13;
-        --tag-bg: #f2ad78;
-        --tag-text: #4d1e0c;
-        --auburn: #f0c19e;
-        --peach: #f2ad78;
-        --panel: #3c190d;
-        --panel-edge: #220d05;
-      }
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
-    a { color: var(--accent); text-decoration: none; }
+    a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     body {
@@ -108,7 +96,7 @@
       flex: 1;
     }
 
-    .toc-link {
+        .toc-link {
       font-family: "DM Mono", monospace;
       font-size: 0.7rem;
       letter-spacing: 0.05em;
@@ -117,8 +105,8 @@
       text-transform: uppercase;
       padding: 0.4rem 0.55rem;
       margin-bottom: 0.45rem;
-      border: 1px solid rgba(242, 173, 120, 0.34);
-      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(var(--caramel-rgb), 0.45);
+      background: rgba(var(--forest-rgb), 0.22);
       box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.24);
       transition: color 130ms ease, background-color 130ms ease, transform 130ms ease, box-shadow 130ms ease;
       display: block;
@@ -149,39 +137,39 @@
       gap: 1.2rem;
     }
 
-    .lang-toggle {
+        .lang-toggle {
       display: flex;
       width: fit-content;
       border: 2px solid var(--peach);
       border-radius: 0;
       overflow: hidden;
-      background: rgba(0, 0, 0, 0.24);
+      background: rgba(var(--forest-rgb), 0.24);
       box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08);
-    }
+        }
 
-    .lang-btn {
+        .lang-btn {
       font-family: "DM Mono", monospace;
       font-size: 10.5px;
       letter-spacing: 0.08em;
       padding: 5px 13px;
       background: transparent;
       border: none;
-      color: rgba(242, 173, 120, 0.75);
+      color: rgba(var(--caramel-rgb), 0.9);
       text-transform: uppercase;
       cursor: pointer;
       transition: background 140ms, color 140ms, box-shadow 140ms;
-    }
+        }
 
-    .lang-btn + .lang-btn {
-      border-left: 1px solid rgba(242, 173, 120, 0.45);
-    }
+        .lang-btn + .lang-btn {
+      border-left: 1px solid rgba(var(--caramel-rgb), 0.55);
+        }
 
-    .lang-btn.active {
+        .lang-btn.active {
       background: var(--peach);
       color: var(--auburn);
       font-weight: 500;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-    }
+      box-shadow: none;
+        }
 
     .lang-btn:not(.active):hover {
       background: rgba(255, 255, 255, 0.1);
@@ -243,7 +231,7 @@
       padding: 4px 12px;
       border: 1px solid var(--border);
       border-radius: 20px;
-      color: var(--muted);
+      color: var(--link);
       text-decoration: none;
       transition: border-color 140ms, color 140ms;
       display: inline-flex;
@@ -251,7 +239,7 @@
       gap: 5px;
     }
 
-    .link-pill:hover { border-color: var(--accent); color: var(--accent); }
+    .link-pill:hover { border-color: var(--link); color: var(--link); }
     .link-pill svg { width: 12px; height: 12px; flex-shrink: 0; fill: currentColor; }
 
     .bio { font-size: 1.05rem; }
@@ -276,18 +264,18 @@
       scroll-margin-top: 2rem;
     }
 
-    h2 {
+        h2 {
       font-family: "DM Mono", monospace;
       font-size: 1.08rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--auburn);
+      color: var(--accent);
       margin-bottom: 1.6rem;
       font-weight: 400;
       display: flex;
       align-items: center;
       gap: 0.8rem;
-    }
+        }
 
     h2::before,
     h2::after {
@@ -398,7 +386,7 @@
     .pub-link {
       font-family: "DM Mono", monospace;
       font-size: 10.5px;
-      color: var(--accent);
+      color: var(--link);
       text-decoration: none;
       letter-spacing: 0.04em;
       margin-top: 0.2rem;
@@ -457,12 +445,12 @@
     /* Contact */
     .contact-line { font-size: 1rem; margin-bottom: 0.4rem; }
     .contact-line a {
-      color: var(--accent);
+      color: var(--link);
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 140ms;
     }
-    .contact-line a:hover { border-bottom-color: var(--accent); }
+    .contact-line a:hover { border-bottom-color: var(--link); }
 
     footer {
       margin-top: 4.5rem;
@@ -710,7 +698,7 @@
     <h2 data-lang="fr">Recherche</h2>
 
     <p style="margin-bottom:1.6rem; font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.04em;">
-      <a href="https://scholar.google.com/citations?user=t1Vm_BAAAAAJ&hl=en" target="_blank" style="color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent);">
+      <a href="https://scholar.google.com/citations?user=t1Vm_BAAAAAJ&hl=en" target="_blank" style="color:var(--link); text-decoration:none; border-bottom:1px solid var(--link);">
         <span data-lang="en">My Google Scholar</span>
         <span data-lang="fr">Mon Google Scholar</span>
       </a>
@@ -741,7 +729,6 @@
       <span class="li" data-lang="en">Others</span>
       <span class="li" data-lang="fr">Autres</span>
     </div>
-
     <div class="pub-item">
       <div class="pub-title">Quantum Lévy processes: construction and asymptotic study (2025).</div>
       <div class="pub-meta" data-lang="en">Doctoral dissertation, Universite Paris-Saclay.</div>
@@ -804,8 +791,8 @@
     <h2 data-lang="en">Misc</h2>
     <h2 data-lang="fr">Divers</h2>
 
-    <p class="misc-item" data-lang="en">This website is written using the <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> font by <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a>.</p>
-    <p class="misc-item" data-lang="fr">Ce site est écrit en utilisant la police <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> par <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a>.</p>
+  <p class="misc-item" data-lang="en">This website is written using the <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> font by <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a> and the <a href="https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff" target="_blank">Black &amp; Gold Elegance</a> color palette.</p>
+  <p class="misc-item" data-lang="fr">Ce site est écrit en utilisant la police <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> par <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a> et la <a href="https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff" target="_blank">palette de couleurs Black &amp; Gold Elegance</a>.</p>
 
     <div class="misc-item">
       <button class="no-click-btn" id="noClickBtn">You shouldn't click here</button>
