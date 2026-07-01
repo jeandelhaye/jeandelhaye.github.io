@@ -10,24 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --olive-rgb: 0, 0, 0;
-      --forest-rgb: 20, 33, 61;
-      --caramel-rgb: 252, 163, 17;
-      --copper-rgb: 252, 163, 17;
-      --bg: #E5E5E5;
+      --olive-rgb: 0, 48, 73;
+      --forest-rgb: 0, 48, 73;
+      --caramel-rgb: 0, 48, 73;
+      --copper-rgb: 102, 155, 188;
+      --bg: #ffffff;
       --text: #000000;
       --muted: rgba(var(--forest-rgb), 0.72);
-      --accent: #FCA311;
-      --link: #FCA311;
+      --accent: #003049;
+      --link: #669bbc;
       --accent-light: rgba(var(--caramel-rgb), 0.16);
       --border: rgba(var(--forest-rgb), 0.24);
-      --card: rgba(255, 255, 255, 0.78);
-      --tag-bg: #14213D;
-      --tag-text: #FFFFFF;
-      --auburn: #000000;
-      --peach: #FCA311;
-      --panel: #000000;
-      --panel-edge: #14213D;
+      --card: rgba(253, 240, 213, 0.82);
+      --tag-bg: #003049;
+      --tag-text: #fdf0d5;
+      --auburn: #003049;
+      --peach: #669bbc;
+      --panel: #003049;
+      --panel-edge: #003049;
       --sidebar-w: 240px;
     }
 
@@ -116,7 +116,7 @@
     }
 
     .toc-link::before {
-      content: "✦ ";
+      content: "♦ ";
       color: var(--peach);
     }
 
@@ -154,7 +154,7 @@
       padding: 5px 13px;
       background: transparent;
       border: none;
-      color: rgba(var(--caramel-rgb), 0.9);
+      color: var(--bg);
       text-transform: uppercase;
       cursor: pointer;
       transition: background 140ms, color 140ms, box-shadow 140ms;
@@ -544,6 +544,10 @@
       <span class="li" data-lang="en">Research</span>
       <span class="li" data-lang="fr">Recherche</span>
     </a>
+    <a class="toc-link" href="#contests">
+      <span class="li" data-lang="en">Awards</span>
+      <span class="li" data-lang="fr">Distinctions</span>
+    </a>
     <a class="toc-link" href="#teaching">
       <span class="li" data-lang="en">Teaching</span>
       <span class="li" data-lang="fr">Enseignement</span>
@@ -692,14 +696,6 @@
       </div>
     </div>
 
-    <div class="entry">
-      <div class="entry-date">2021</div>
-      <div>
-        <div class="entry-title">Agrégation en Mathématiques</div>
-        <div class="entry-org" data-lang="en">Ministry of Education — ranked national competitive examination, Probability &amp; Statistics option.</div>
-        <div class="entry-org" data-lang="fr">Ministère de l'Éducation nationale — concours national de rang, option Probabilités et statistiques.</div>
-      </div>
-    </div>
   </section>
 
   <section id="research">
@@ -747,6 +743,32 @@
     </div>
   </section>
 
+  <section id="contests">
+    <h2 data-lang="en">Awards</h2>
+    <h2 data-lang="fr">Distinctions</h2>
+
+    <div class="entry">
+      <div class="entry-date">2026</div>
+      <div>
+        <div class="entry-title" data-lang="en">Winner of the <a href="https://fondation-hadamard.fr/fr/campus-de-paris-saclay/formation/edmh/deroulement-du-doctorat/parcours-mathtech/" target="_blank">MathTech Challenge 2026</a></div>
+        <div class="entry-title" data-lang="fr">Lauréat du <a href="https://fondation-hadamard.fr/fr/campus-de-paris-saclay/formation/edmh/deroulement-du-doctorat/parcours-mathtech/" target="_blank">MathTech Challenge 2026</a></div>
+        <div class="entry-body">
+          <span class="li" data-lang="en">Together with <a href="https://www.hadrienbigoballand.com" target="_blank">Hadrien Bigo--Balland</a> and Pierre-André Mikem.</span>
+          <span class="li" data-lang="fr">Avec <a href="https://www.hadrienbigoballand.com" target="_blank">Hadrien Bigo--Balland</a> et Pierre-André Mikem.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2021</div>
+      <div>
+        <div class="entry-title">Agrégation en Mathématiques</div>
+        <div class="entry-org" data-lang="en">Master's level ranked national competitive examination, Probability &amp; Statistics option.</div>
+        <div class="entry-org" data-lang="fr">Concours national de rang de niveau master, option Probabilités et statistiques.</div>
+      </div>
+    </div>
+  </section>
+
   <section id="teaching">
     <h2 data-lang="en">Teaching</h2>
     <h2 data-lang="fr">Enseignement</h2>
@@ -768,6 +790,18 @@
     </div>
 
     <div class="entry">
+      <div class="entry-date">2025</div>
+      <div>
+        <div class="entry-title" data-lang="en">Mathematics for third-year economics students</div>
+        <div class="entry-title" data-lang="fr">Mathematiques pour les etudiants de L3 economie</div>
+        <div class="entry-body">
+          <span class="li" data-lang="en">Topics: quadratic forms, optimization, differential calculus, linear algebra.</span>
+          <span class="li" data-lang="fr">Themes : formes quadratiques, optimisation, calcul differentiel, algebre lineaire.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
       <div class="entry-date">2024</div>
       <div>
         <div class="entry-title" data-lang="en">Statistics and probability for first-year economics students</div>
@@ -783,25 +817,14 @@
       </div>
     </div>
 
-    <div class="entry">
-      <div class="entry-date">2025</div>
-      <div>
-        <div class="entry-title" data-lang="en">Mathematics for third-year economics students</div>
-        <div class="entry-title" data-lang="fr">Mathematiques pour les etudiants de L3 economie</div>
-        <div class="entry-body">
-          <span class="li" data-lang="en">Topics: quadratic forms, optimization, differential calculus, linear algebra.</span>
-          <span class="li" data-lang="fr">Themes : formes quadratiques, optimisation, calcul differentiel, algebre lineaire.</span>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section id="misc">
     <h2 data-lang="en">Misc</h2>
     <h2 data-lang="fr">Divers</h2>
 
-  <p class="misc-item" data-lang="en">This website is written using the <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> font by <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a> and the <a href="https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff" target="_blank">Black &amp; Gold Elegance</a> color palette.</p>
-  <p class="misc-item" data-lang="fr">Ce site est écrit en utilisant la police <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> par <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a> et la <a href="https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff" target="_blank">palette de couleurs Black &amp; Gold Elegance</a>.</p>
+  <p class="misc-item" data-lang="en">This website is written using the <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> font by <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a>.</p>
+  <p class="misc-item" data-lang="fr">Ce site est écrit en utilisant la police <a href="https://www.fontshare.com/fonts/satoshi" target="_blank">Satoshi</a> par <a href="https://www.indiantypefoundry.com" target="_blank">Indian Type Foundry</a>.</p>
 
     <div class="misc-item">
       <button class="no-click-btn" id="noClickBtn">You shouldn't click here</button>
